@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Exercice 4</title>
+  </head>
+  <body>
+    <nav id="nav" class="nav" role="navigation">
+      <section class="nav-section">
+        <!-- ACTUAL NAVIGATION MENU -->
+        <ul
+          class="nav-menu"
+          id="menu"
+          tabindex="-1"
+          aria-label="main navigation"
+          hidden
+        >
+          <li class="nav-item"><a class="nav-link" href="">À PROPOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="">VOIR</a></li>
+          <li class="nav-item"><a class="nav-link" href="">MODIFIER</a></li>
+          <a href="">
+            <img class="logo" src="./images/logo.svg" alt="" />
+          </a>
+        </ul>
+        <div class="navbar">
+          <a href="">
+            <img class="logo" src="./images/logo.svg" alt="" />
+          </a>
+          <!-- MENU TOGGLE BUTTON -->
+          <a
+            href="#nav"
+            class="nav-toggle"
+            role="button"
+            aria-expanded="false"
+            aria-controls="menu"
+          >
+            <svg
+              class="menu-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 50 50"
+            >
+              <g>
+                <line
+                  class="menu-icon-bar"
+                  x1="13"
+                  y1="16.5"
+                  x2="37"
+                  y2="16.5"
+                />
+                <line
+                  class="menu-icon-bar"
+                  x1="13"
+                  y1="24.5"
+                  x2="37"
+                  y2="24.5"
+                />
+                <line
+                  class="menu-icon-bar"
+                  x1="13"
+                  y1="24.5"
+                  x2="37"
+                  y2="24.5"
+                />
+                <line
+                  class="menu-icon-bar"
+                  x1="13"
+                  y1="32.5"
+                  x2="37"
+                  y2="32.5"
+                />
+                <circle class="menu-icon-circle" r="23" cx="25" cy="25" />
+              </g>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- NAV DESKTOP -->
+      <section class="nav-desktop-section">
+        <div class="navbar-desktop">
+          <a href="">
+            <img class="logo" src="./images/logo.svg" alt="" />
+          </a>
+          <ul>
+            <li><a href="">À PROPOS</a></li>
+            <li><a href="">VOIR</a></li>
+            <li><a href="">MODIFIER</a></li>
+          </ul>
+        </div>
+      </section>
+    </nav>
+    <section class="section-padding about-section">
+      <div class="center">
+        <article>
+          <h2 class="section-title">
+            Les droits d'accès : qu'est-ce que c'est ?
+          </h2>
+          <div class="line"></div>
+          <p>
+            Les droits d'accès définissent la possession d'un fichier ou d'un
+            répertoire à un utilisateur et à un groupe d'utilisateurs. Ils
+            gèrent aussi quelles actions les utilisateurs ont le droit
+            d'effectuer sur les fichiers (lecture, écriture et exécution), selon
+            qu'ils sont propriétaire du fichier, membre du groupe propriétaire
+            du fichier ou ni l'un ni l'autre. La possession et la gestion des
+            permissions associées s'effectue individuellement avec chaque
+            fichier.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section class="section-padding see-section">
+      <div class="center">
+        <article>
+          <h2 class="section-title">Voir les permissions</h2>
+          <div class="line"></div>
+          <p>
+            Sous Nautilus (Ubuntu), faites un clic droit sur un fichier ou
+            répertoire puis choisissez propriétés. Rendez-vous dans l'onglet
+            permissions.
+          </p>
+          <div>
+            <img src="./images/permissions_nautilus_fichier.png" alt="" />
+            <img src="./images/permissions_nautilus_dossier.png" alt="" />
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="section-padding modify-section">
+      <div class="center">
+        <article>
+          <h2 class="section-title">Modifier les permissions</h2>
+          <div class="line"></div>
+          <p>
+            Un fichier a un propriétaire et un groupe. Nous pouvons les changer.
+          </p>
+          <p>
+            La commande chown (change owner, changer le propriétaire) permet de
+            changer le propriétaire du fichier. Seuls le super-utilisateur ou le
+            propriétaire actuel d'un fichier peut utiliser chown. La commande
+            s'utilise de la façon suivante :
+          </p>
+          <pre>
+sudo chown toto fichier
+          </pre>
+          <p>
+            L'outil chmod (change mode, changer les permissions) permet de
+            modifier les permissions sur un fichier. Il peut s'employer de deux
+            façons : soit en précisant les permissions de manière octale, à
+            l'aide de chiffres1) ; soit en ajoutant ou en retirant des
+            permissions à une ou plusieurs catégories d'utilisateurs à l'aide
+            des symboles r w et x, que nous avons présentés plus haut. Nous
+            préférerons présenter cette seconde façon ("ajout ou retrait de
+            permissions à l'aide des symboles"), car elle est probablement plus
+            intuitive pour les néophytes. Sachez seulement que les deux méthodes
+            sont équivalentes, c'est-à-dire qu'elles affectent toutes deux les
+            permissions de la même manière.
+          </p>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <section class="footer-section">
+        <div class="logo-item" data-aos="fade-up">
+          <a href="">
+            <img class="logo" src="./images/logo.svg" alt="a" />
+          </a>
+        </div>
+        <article class="footer-article" data-aos="fade-up">
+          <div class="admin">
+            <div class="admin-item">
+              <h2 class="admin-title">Raphaël Dorce</h2>
+            </div>
+          </div>
+          <div class="seo">
+            <a href="">À PROPOS</a>
+            <a href="">VOIR</a>
+            <a href="">MODIFIER</a>
+          </div>
+        </article>
+        <div class="copyright-item"><h4>COPYRIGHT 2021</h4></div>
+      </section>
+    </footer>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /*------------------------------------------- BASE */
 
@@ -76,20 +76,10 @@ a:active {
   padding: 2rem 0;
 }
 
-h1 {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-.hero-section p {
-  margin-top: 4rem;
-}
-
 .line {
-  margin: 4rem auto 2rem;
+  margin: 1rem 0 2rem;
   height: 0.2rem;
-  width: 15rem;
+  width: 10rem;
   background: rgb(210, 12, 11);
   background: linear-gradient(
     90deg,
@@ -104,66 +94,44 @@ h1 {
   );
 }
 
-.hero-section article {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-.hero-section article h2 {
-  margin-top: 2rem;
-  font-size: 2rem;
+.two {
+  width: 5rem;
+  height: 5rem;
+  background: rgb(116, 208, 241);
+}
+.three {
+  width: 5rem;
+  height: 5rem;
+  background: #d20c0b;
+  border-radius: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-  width: 4rem;
-  margin-right: 2rem;
-  filter: invert(91%) sepia(96%) saturate(14%) hue-rotate(179deg)
-    brightness(104%) contrast(100%);
+  filter: invert(96%) sepia(0%) saturate(7491%) hue-rotate(350deg)
+    brightness(104%) contrast(107%);
+  width: 3rem;
+  cursor: pointer;
 }
 
-.bold {
-  font-weight: 900;
+input {
+  background: #121212;
+  padding: 0.5rem 2rem;
 }
 
-.underline {
-  text-decoration: underline;
+button {
+  background: #313131;
+  padding: 0.5rem 2rem;
+  color: #cccccc;
 }
-
-.crossed {
-  text-decoration: line-through;
-}
-
-.uppercase-red {
-  color: #d20c0b;
-}
-.uppercase-green {
-  color: #54a72e;
-}
-.uppercase-blue {
-  color: #328dd8;
-}
-.uppercase-purple {
-  color: #a765ce;
-}
-.uppercase-orange {
-  color: #ffa500;
-}
-.uppercase-sunray {
-  color: #edae49;
-}
-.uppercase-brick {
-  color: #d1495b;
-}
-.uppercase-sea {
-  color: #00798c;
-}
-
-@media screen and (min-width: 768px) {
-  h1 {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
+button:hover {
+  color: #ffffff;
 }

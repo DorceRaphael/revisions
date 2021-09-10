@@ -76,14 +76,39 @@ a:active {
   padding: 2rem 0;
 }
 
-h1 {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 900;
-  text-transform: uppercase;
+.question-section {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background: #323232;
+  height: 50vh;
 }
-.hero-section p {
-  margin-top: 4rem;
+.question-section p {
+  position: relative;
+}
+
+.answer-section {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 50vh;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.answer-section p {
+  text-align: center;
+  width: 4rem;
+  padding: 0.2rem 0;
+  background: #d20c0b;
+  animation: 1s linear 0s infinite forwards running circle;
 }
 
 .line {
@@ -104,66 +129,27 @@ h1 {
   );
 }
 
-.hero-section article {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.hero-section article h2 {
-  margin-top: 2rem;
-  font-size: 2rem;
+@keyframes fadeInLogo {
+  0% {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: 90%;
+  }
 }
 
 .logo {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
   width: 4rem;
   margin-right: 2rem;
   filter: invert(91%) sepia(96%) saturate(14%) hue-rotate(179deg)
     brightness(104%) contrast(100%);
-}
-
-.bold {
-  font-weight: 900;
-}
-
-.underline {
-  text-decoration: underline;
-}
-
-.crossed {
-  text-decoration: line-through;
-}
-
-.uppercase-red {
-  color: #d20c0b;
-}
-.uppercase-green {
-  color: #54a72e;
-}
-.uppercase-blue {
-  color: #328dd8;
-}
-.uppercase-purple {
-  color: #a765ce;
-}
-.uppercase-orange {
-  color: #ffa500;
-}
-.uppercase-sunray {
-  color: #edae49;
-}
-.uppercase-brick {
-  color: #d1495b;
-}
-.uppercase-sea {
-  color: #00798c;
-}
-
-@media screen and (min-width: 768px) {
-  h1 {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
+  animation: 5s ease-in-out 0s infinite forwards running fadeInLogo;
 }
