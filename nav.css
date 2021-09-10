@@ -1,0 +1,268 @@
+/*------------------------------------------- NAV */
+
+h1 {
+  position: absolute;
+  visibility: hidden;
+  z-index: -9999;
+  opacity: 0;
+  left: 0px;
+  bottom: 0px;
+}
+
+.nav-desktop-section {
+  display: none;
+}
+
+nav {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  transition: all 0.3s;
+  background: #0c0c0c00;
+}
+
+.navbar {
+  display: flex;
+  width: 90vw;
+  height: 5.5rem;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  filter: invert(96%) sepia(0%) saturate(7491%) hue-rotate(350deg)
+    brightness(104%) contrast(107%);
+  width: 4rem;
+  cursor: pointer;
+}
+
+.nav-toggle {
+  z-index: 10;
+  border: 0;
+  background: transparent;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color, color 0.15s linear;
+}
+
+.nav-toggle:hover .menu-icon-bar {
+  color: #32cdb1;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 5;
+  visibility: hidden;
+  height: 100vh;
+  background: #0c0c0c;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0, 0.995, 0.99, 1) 0.3s;
+}
+
+.nav-menu img {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+}
+
+.nav-link {
+  color: white;
+  display: block;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  margin: 1rem;
+  padding-bottom: 0.5rem;
+  width: 65vw;
+  border-bottom: 2px solid #32cdb1;
+  transition: color 0.2s;
+}
+
+.nav-menu li:nth-of-type(1) {
+  margin-top: 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  outline: 0;
+  color: #32cdb1;
+}
+
+.menu-icon {
+  display: block;
+  cursor: pointer;
+  color: white;
+  transform: rotate(0deg);
+  transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.menu-icon-bar,
+.menu-icon-circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+.menu-icon-bar {
+  transform: rotate(0deg);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-in-out;
+  /* transition: color 0.2s; */
+}
+.menu-icon-circle {
+  transition: stroke-dashoffset 0.3s linear 0.1s;
+  stroke-dashoffset: 144.513262038;
+  stroke-dasharray: 144.513262038;
+}
+
+.nav:target .menu-icon,
+.nav-open .menu-icon {
+  color: white;
+  transform: rotate(180deg);
+}
+.nav:target .menu-icon-circle,
+.nav-open .menu-icon-circle {
+  stroke-dashoffset: 0;
+}
+.nav:target .menu-icon-bar:nth-child(1),
+.nav:target .menu-icon-bar:nth-child(4),
+.nav-open .menu-icon-bar:nth-child(1),
+.nav-open .menu-icon-bar:nth-child(4) {
+  opacity: 0;
+}
+.nav:target .menu-icon-bar:nth-child(2),
+.nav-open .menu-icon-bar:nth-child(2) {
+  transform: rotate(45deg);
+}
+.nav:target .menu-icon-bar:nth-child(3),
+.nav-open .menu-icon-bar:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.nav:target .nav-menu,
+.nav-open .nav-menu {
+  visibility: visible;
+}
+.nav:target .nav-menu,
+.nav-open .nav-menu {
+  opacity: 1;
+  transform: translateY(0);
+}
+.nav:target .nav-item,
+.nav-open .nav-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.accordion {
+  cursor: pointer;
+}
+.accordion:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f078";
+  margin-right: 0.5rem;
+  float: right;
+}
+
+.active:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f077";
+}
+
+.panel {
+  display: grid;
+  overflow: hidden;
+  margin-left: 2rem;
+  row-gap: 1rem;
+  max-height: 0;
+  transition: all 0.2s ease-out;
+}
+
+.panel li a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+.panel li a:hover,
+.panel li a:focus {
+  color: #32cdb1;
+}
+
+@media screen and (min-width: 768px) {
+  /*------------------------------------------- NAV DESKTOP */
+  .logo {
+    width: 5rem;
+  }
+
+  .nav-section {
+    display: none;
+  }
+
+  .nav-desktop-section {
+    display: contents;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    transition: all 0.3s;
+    background: #0c0c0c00;
+    height: 5.5rem;
+  }
+
+  .navbar-desktop {
+    display: flex;
+    width: 90vw;
+    height: 5.5rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-desktop ul {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-desktop ul li > a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 0.25rem 0.5rem;
+    margin-right: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+  }
+
+  .navbar-desktop ul a i {
+    font-weight: normal;
+    font-size: 1.75rem;
+  }
+
+  .navbar-desktop ul a:after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0%;
+    position: absolute;
+    background: #32cdb1;
+    transition: width 0.3s ease-in-out;
+    width: 0;
+  }
+
+  .navbar-desktop ul a:hover:after {
+    width: 100%;
+    left: 0;
+  }
+}
