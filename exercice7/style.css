@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/*------------------------------------------- BASE */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #242424;
+  color: white;
+  font-family: "Heebo", sans-serif;
+}
+
+.red {
+  color: #d20c0b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+input {
+  line-height: 1.25rem;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  color: white;
+}
+
+input,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.display-none {
+  display: none;
+}
+
+.center {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding: 2rem 0;
+}
+
+.line {
+  margin: 1rem 0 2rem;
+  height: 0.2rem;
+  width: 10rem;
+  background: rgb(210, 12, 11);
+  background: linear-gradient(
+    90deg,
+    rgba(210, 12, 11, 1) 0%,
+    rgba(255, 165, 0, 1) 10%,
+    rgba(237, 174, 73, 1) 25%,
+    rgba(84, 167, 46, 1) 40%,
+    rgba(50, 141, 216, 1) 60%,
+    rgba(167, 101, 206, 1) 75%,
+    rgba(209, 73, 91, 1) 90%,
+    rgba(0, 121, 140, 1) 100%
+  );
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.logo {
+  filter: invert(96%) sepia(0%) saturate(7491%) hue-rotate(350deg)
+    brightness(104%) contrast(107%);
+  width: 3rem;
+  cursor: pointer;
+}
+
+input {
+  background: #121212;
+  padding: 0.5rem 2rem;
+}
+
+button {
+  background: #313131;
+  padding: 0.5rem 2rem;
+  color: #cccccc;
+}
+button:hover {
+  color: #ffffff;
+}
