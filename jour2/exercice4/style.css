@@ -158,6 +158,22 @@ button:hover {
 
 article {
   margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+}
+
+article div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #333333;
+}
+
+.continent {
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .danger {
