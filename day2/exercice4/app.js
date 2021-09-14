@@ -16,9 +16,9 @@ function getSelectedCheckboxValues(name) {
 document.querySelector("#check-btn").addEventListener("click", function (e) {
   e.preventDefault();
   oneResult.innerHTML = "";
-  contryNbrValue = countryNbr.options[countryNbr.selectedIndex].value;
+  countrySelected = countryNbr.options[countryNbr.selectedIndex].value;
   for (let i = 0; i < getSelectedCheckboxValues("continent").length; i++) {
-    loadData(contryNbrValue, getSelectedCheckboxValues("continent")[i]);
+    loadData(countrySelected, getSelectedCheckboxValues("continent")[i]);
   }
 });
 
