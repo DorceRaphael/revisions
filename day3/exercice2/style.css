@@ -127,6 +127,14 @@ form div {
   row-gap: 0.5rem;
   column-gap: 0.5rem;
 }
+.radio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+}
 
 label {
   display: inline-block;
@@ -168,7 +176,7 @@ article {
 
 article div {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 1rem;
   padding: 0.5rem 0;
   border-bottom: 1px solid #333333;
@@ -192,4 +200,11 @@ article div {
   justify-items: center;
   height: 5rem;
   background: rgba(84, 167, 46, 0.5);
+}
+
+.one-result {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+  column-gap: 1rem;
 }

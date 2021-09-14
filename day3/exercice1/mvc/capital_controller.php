@@ -9,11 +9,15 @@ if (isset($_POST["country"]) && $_POST["country"] != "") {
 }
 
 $stmt = $pdo->prepare("SELECT * FROM europe WHERE country = ?");
-$stmt->execute([$country]);
+$stmt->bindParam(1, $country);
+$stmt->execute();
 $countries = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($countries as $country) {?>
+<div>
+    <p><?php echo $country["country"]?></p>
     <p><?php echo $country["capital"]?></p>
+</div>
 <?php
 }
 ?>

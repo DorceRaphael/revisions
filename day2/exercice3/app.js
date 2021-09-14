@@ -1,5 +1,5 @@
 const letters = "^[a-zA-Z_-]*$";
-oneResult = document.querySelector(".one");
+const oneResult = document.querySelector(".one");
 let departements = document.querySelector("#departements");
 
 function check() {

@@ -11,7 +11,7 @@ if (JSON.parse(localStorage.getItem("persons", persons))) {
 console.log(persons);
 console.log(personsPicked);
 
-oneResult = document.querySelector(".one");
+const oneResult = document.querySelector(".one");
 document.querySelector("#add-btn").addEventListener("click", function () {
   let addInput = document.querySelector("#add-input").value;
   if (addInput != "" && addInput.match(letters)) {

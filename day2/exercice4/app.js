@@ -1,5 +1,5 @@
 const letters = "^[a-zA-Z_-]*$";
-oneResult = document.querySelector(".one");
+const oneResult = document.querySelector(".one");
 let data = "";
 let dataFiltered = "";
 let countryNbr = document.querySelector("#country-nbr");

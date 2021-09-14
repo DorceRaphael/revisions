@@ -1,4 +1,4 @@
-oneResult = document.querySelector(".one");
+const oneResult = document.querySelector(".one");
 document.querySelector("#one-btn").addEventListener("click", function () {
   let y = Math.floor(Math.random() * 1000);
   oneResult.innerHTML = `<p>${y}</p>`;

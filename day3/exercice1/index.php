@@ -18,7 +18,15 @@
           </select>
           <button id="check-btn">CHECK</button>
         </form>
-        <article class="one"></article>
+        <div>
+          <article>
+            <div>
+                <p class="bold">PAYS</p>
+                <p class="bold">CAPITALE</p>
+            </div>
+          </article>
+          <article class="one"></article>
+        </div>
       </div>
     </section>
     <!--------------------------------------------- JQUERY -->
