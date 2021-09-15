@@ -30,8 +30,8 @@ var encrypt = document.querySelector("#encrypt");
 encrypt.addEventListener("click", function () {
   var userInput = document.querySelector(".user-input").value;
   var result = [];
-  const alphabetMin = "abcdefghijklmnopqrstuvwxyz";
-  const alphabetMaj = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const alphabetMin = "abcdefghijklmnopqrstuvwxyz ";
+  const alphabetMaj = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
   let pos = -1;
   for (let i = 0; i < userInput.length; i++) {
     if (alphabetMin.indexOf(userInput[i]) >= 0) {
