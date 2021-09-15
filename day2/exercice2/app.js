@@ -4,6 +4,8 @@ let personsPicked = [];
 
 if (JSON.parse(localStorage.getItem("persons", persons))) {
   persons = JSON.parse(localStorage.getItem("persons", persons));
+}
+if (JSON.parse(localStorage.getItem("personsPicked", personsPicked))) {
   personsPicked = JSON.parse(
     localStorage.getItem("personsPicked", personsPicked)
   );
