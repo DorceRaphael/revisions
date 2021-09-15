@@ -27,9 +27,11 @@ birthdayBtn.addEventListener("click", () => {
     );
     if (days / 365 > 25) {
       console.log("BIENVENUE");
-    } else {
+    } else if (days / 365 > 0 && days / 365 < 25) {
       let wait = 9125 - days;
       console.log(`You have to wait ${wait} days`);
+    } else {
+      console.log("bruh");
     }
   }
   getAge();
