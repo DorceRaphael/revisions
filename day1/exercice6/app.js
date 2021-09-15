@@ -26,7 +26,7 @@ birthdayBtn.addEventListener("click", () => {
       (new Date() - new Date(dateString)) / (1000 * 60 * 60 * 24)
     );
     if (days / 365 > 25) {
-      ("BIENVENUE");
+      console.log("BIENVENUE");
     } else {
       let wait = 9125 - days;
       console.log(`You have to wait ${wait} days`);
