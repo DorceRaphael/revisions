@@ -1,4 +1,5 @@
 const oneResult = document.querySelector(".one");
+const userForm = document.querySelector("#user-form");
 let sign = document.querySelector("#sign");
 let signSelected = "";
 let genderChecked = "";
@@ -7,6 +8,19 @@ document.querySelector("#see-btn").addEventListener("click", function (e) {
   e.preventDefault();
   seeUsers();
 });
+
+document
+  .querySelector("#show-form-btn")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    userForm.style.display = "grid";
+  });
+document
+  .querySelector("#close-form-btn")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    userForm.style.display = "none";
+  });
 
 document.querySelector("#add-btn").addEventListener("click", function (e) {
   e.preventDefault();

@@ -29,6 +29,7 @@ Faire les exercices pour reviser.
 - HTML5
 - CSS3
 - JS
+- PHP
 
 ## ✍️ Collaborateurs <a name = "authors"></a>
 
