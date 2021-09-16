@@ -20,4 +20,15 @@ foreach ($countries as $country) {?>
 </div>
 <?php
 }
+
+if (strtoupper($_POST["answer"]) == strtoupper($country["capital"]) ) {
+?>
+<p class="success">BONNE RÉPONSE</p>
+<?php
+} else {
+?>
+<p class="danger">MAUVAISE RÉPONSE</p>
+<?php
+}
+
 ?>

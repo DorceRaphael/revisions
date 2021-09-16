@@ -16,6 +16,15 @@
           <select name="country" id="country">
             <?php include "./mvc/option_controller.php";?>
           </select>
+          <div>
+              <label for="answer">Devine la capitale</label>
+              <input
+                type="text"
+                name="answer"
+                id="answer-input"
+                autocomplete="off"
+              />
+            </div>
           <button id="check-btn">CHECK</button>
         </form>
         <div>
@@ -28,9 +37,6 @@
           <article class="one"></article>
         </div>
       </div>
-    </section>
-    <!--------------------------------------------- JQUERY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--------------------------------------------- SCRIPT -->
     <script src="app.js"></script>
   </body>
