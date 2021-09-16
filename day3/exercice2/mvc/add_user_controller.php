@@ -13,7 +13,7 @@ if (isset($_POST["name"]) && $_POST["name"] != ""
     $stmt->bindParam(4, $_POST["sign"]);
     $stmt->execute();
 ?>
-<p class="success">NICE</p>
+<p class="success">PERSONNE AJOUTÉE</p>
 <?php
 } else {
 ?>

@@ -8,20 +8,13 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($users as $user) {?>
 <div class="user" id="<?php echo $user["id"]?>">
-    <p><?php echo $user["name"]?></p>
-    <p><?php echo $user["forname"]?></p>
-    <p><?php echo $user["gender"]?></p>
-    <p><?php echo $user["sign"]?></p>
-    <button class="user-btn" id="modify-btn"><i class="far fa-edit"></i></button>
+    <p class="user-name"><?php echo $user["name"]?></p>
+    <p class="user-forname"><?php echo $user["forname"]?></p>
+    <p value="<?php echo $user["id_gender"]?>" class="user-gender"><?php echo $user["gender"]?></p>
+    <p value="<?php echo $user["id_sign"]?>" class="user-sign"><?php echo $user["sign"]?></p>
+    <button class="user-btn" id="show-modify-form-btn"><i class="far fa-edit"></i></button>
     <button class="user-btn" id="delete-btn"><i class="far fa-trash-alt"></i></button>
 </div>
 <?php
 }
 ?>
-
-<script>
-document.querySelector("#delete-btn").addEventListener("click", function (e) {
-  e.preventDefault();
-  console.log(this.parentNode.getAttribute("id"));
-});
-</script>

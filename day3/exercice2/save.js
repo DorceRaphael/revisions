@@ -1,6 +1,6 @@
 const oneResult = document.querySelector(".one");
 const userForm = document.querySelector("#user-form");
-let signs = document.querySelector("#signs");
+let sign = document.querySelector("#sign");
 let signSelected = "";
 let genderChecked = "";
 
@@ -15,9 +15,8 @@ document
     e.preventDefault();
     addBtnStatus("block");
     modifyBtnStatus("none");
-    document.querySelector("#name-input").value = "";
-    document.querySelector("#forname-input").value = "";
     formStatus("grid");
+    document.querySelector("#name-input").value = "bruh";
   });
 
 document
@@ -32,7 +31,7 @@ document.querySelector("#add-btn").addEventListener("click", function (e) {
   nameInput = document.querySelector("#name-input").value;
   fornameInput = document.querySelector("#forname-input").value;
   genderChecked = document.querySelector('input[name="gender"]:checked').value;
-  signSelected = signs.options[signs.selectedIndex].value;
+  signSelected = sign.options[sign.selectedIndex].value;
   addUser();
   formStatus("none");
 });
@@ -49,17 +48,52 @@ function modifyBtnStatus(status) {
   document.querySelector("#modify-btn").style.display = status;
 }
 
+// function addUser() {
+//   $.ajax({
+//     url: "./mvc/add_user_controller.php",
+//     type: "POST",
+//     cache: false,
+//     data: {
+//       name: nameInput,
+//       forname: fornameInput,
+//       gender: genderChecked,
+//       sign: signSelected,
+//     },
+//     success: function (response) {
+//       $(".one").html(response);
+//     },
+//   });
+// }
+
 function addUser() {
   const xhttp = new XMLHttpRequest();
-  xhttp.onload = function () {
-    oneResult.innerHTML = this.responseText;
-  };
-  xhttp.open("POST", "./mvc/add_user_controller.php", true);
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send(
-    `name=${nameInput}&forname=${fornameInput}&gender=${genderChecked}&sign=${signSelected}`
+  xhttp.onload = function () {};
+  xhttp.open(
+    "POST",
+    "./mvc/add_user_controller.php?name=" +
+      nameInput +
+      "&forname=" +
+      fornameInput +
+      "&gender=" +
+      genderChecked +
+      "&sign=" +
+      signSelected +
+      "",
+    true
   );
+  xhttp.send();
 }
+
+// function seeUsers() {
+//   $.ajax({
+//     url: "./mvc/see_users_controller.php",
+//     type: "GET",
+//     cache: false,
+//     success: function (response) {
+//       $(".one").html(response);
+//     },
+//   });
+// }
 
 function seeUsers() {
   const xhttp = new XMLHttpRequest();
@@ -83,14 +117,6 @@ function seeUsers() {
           this.parentNode.querySelector(".user-name").textContent;
         document.querySelector("#forname-input").value =
           this.parentNode.querySelector(".user-forname").textContent;
-        document.querySelector(
-          `#gender${this.parentNode
-            .querySelector(".user-gender")
-            .getAttribute("value")}`
-        ).checked = true;
-        signs.value = this.parentNode
-          .querySelector(".user-sign")
-          .getAttribute("value");
         formStatus("grid");
       });
     });
@@ -98,43 +124,87 @@ function seeUsers() {
     document.querySelectorAll("#modify-btn").forEach((btn) => {
       btn.addEventListener("click", function (e) {
         e.preventDefault();
+        // nameInput = this.parentNode.querySelector(".user-name").textContent;
+        // fornameInput = this.parentNode.querySelector(".user-forname").textContent;
+        // genderChecked = this.parentNode.querySelector(".user-gender").textContent;
+        // signSelected = this.parentNode.querySelector(".user-sign").textContent;
         nameInput = document.querySelector("#name-input").value;
         fornameInput = document.querySelector("#forname-input").value;
         genderChecked = document.querySelector(
           'input[name="gender"]:checked'
         ).value;
-        signSelected = signs.options[signs.selectedIndex].value;
+        signSelected = sign.options[sign.selectedIndex].value;
         modifyUser();
         formStatus("none");
       });
     });
+
+    // function deleteUser() {
+    //   $.ajax({
+    //     url: "./mvc/delete_user_controller.php",
+    //     type: "POST",
+    //     cache: false,
+    //     data: {
+    //       id: id,
+    //     },
+    //     success: function (response) {
+    //       $(".one").html(response);
+    //     },
+    //   });
+    // }
 
     function deleteUser() {
       const xhttp = new XMLHttpRequest();
       xhttp.onload = function () {
         oneResult.innerHTML = this.responseText;
       };
-      xhttp.open("POST", "./mvc/delete_user_controller.php", true);
-      xhttp.setRequestHeader(
-        "Content-type",
-        "application/x-www-form-urlencoded"
+      xhttp.open(
+        "POST",
+        "./mvc/delete_user_controller.php?id=" + id + "",
+        true
       );
-      xhttp.send(`id=${id}`);
+      xhttp.send();
     }
+
+    // function modifyUser() {
+    //   $.ajax({
+    //     url: "./mvc/modify_user_controller.php",
+    //     type: "POST",
+    //     cache: false,
+    //     data: {
+    //       id: id,
+    //       name: nameInput,
+    //       forname: fornameInput,
+    //       gender: genderChecked,
+    //       sign: signSelected,
+    //     },
+    //     success: function (response) {
+    //       $(".one").html(response);
+    //     },
+    //   });
+    // }
 
     function modifyUser() {
       const xhttp = new XMLHttpRequest();
       xhttp.onload = function () {
         oneResult.innerHTML = this.responseText;
       };
-      xhttp.open("POST", "./mvc/modify_user_controller.php", true);
-      xhttp.setRequestHeader(
-        "Content-type",
-        "application/x-www-form-urlencoded"
+      xhttp.open(
+        "POST",
+        "./mvc/add_user_controller.php?id=" +
+          id +
+          "&name=" +
+          nameInput +
+          "&forname=" +
+          fornameInput +
+          "&gender=" +
+          genderChecked +
+          "&sign=" +
+          signSelected +
+          "",
+        true
       );
-      xhttp.send(
-        `id=${id}&name=${nameInput}&forname=${fornameInput}&gender=${genderChecked}&sign=${signSelected}`
-      );
+      xhttp.send();
     }
   };
   xhttp.open("POST", "./mvc/see_users_controller.php", true);

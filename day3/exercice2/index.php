@@ -54,11 +54,12 @@
               />
               <label for="gender2">Femme</label>
             </div>
-            <select name="sign" id="sign">
+            <select name="signs" id="signs">
               <?php include "./mvc/option_controller.php";?>
             </select>
             <div class="btn-container">
               <button class="base-btn" id="add-btn">AJOUTER</button>
+              <button class="base-btn" id="modify-btn">MODIFIER</button>
               <button class="base-btn" id="close-form-btn">FERMER</button>
             </div>
           </form>
@@ -80,8 +81,6 @@
         </div>
       </div>
     </section>
-    <!--------------------------------------------- JQUERY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--------------------------------------------- SCRIPT -->
     <script src="app.js"></script>
   </body>
