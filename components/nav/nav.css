@@ -15,10 +15,16 @@ h1 {
 
 nav {
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 100;
   width: 100%;
   transition: all 0.3s;
   background: #0c0c0c00;
+}
+
+.nav-placeholder {
+  height: 5.5rem;
 }
 
 .navbar {
@@ -125,6 +131,10 @@ nav {
   stroke-dasharray: 144.513262038;
 }
 
+.nav-open{
+  position: fixed;
+}
+
 .nav:target .menu-icon,
 .nav-open .menu-icon {
   color: white;
@@ -152,20 +162,24 @@ nav {
 .nav-open .nav-menu {
   visibility: visible;
 }
+
 .nav:target .nav-menu,
 .nav-open .nav-menu {
   opacity: 1;
   transform: translateY(0);
 }
+
 .nav:target .nav-item,
 .nav-open .nav-item {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* ACCORDION */
 .accordion {
   cursor: pointer;
 }
+
 .accordion:after {
   font-family: "Font Awesome 5 Free";
   content: "\f078";
@@ -265,4 +279,67 @@ nav {
     width: 100%;
     left: 0;
   }
+  
+    /*------------------------------------------- NAV DROPDOWN DESKTOP */
+    .drop-btn {
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      padding: 0 0.25rem 0.5rem;
+      margin-right: 1rem;
+      font-weight: 600;
+      font-size: 1rem;
+      position: relative;
+    }
+  
+    .drop-btn:after {
+      font-family: "Font Awesome 5 Free";
+      margin-left: 1rem;
+      content: "\f078";
+      float: right;
+    }
+  
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+  
+    .dropdown-content {
+      position: absolute;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 12rem;
+      max-height: 0rem;
+      background: #0c0c0c;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+    }
+  
+    .dropdown-content a {
+      margin-top: 0.5rem;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 0 1rem 0.5rem;
+      font-weight: 300;
+      font-size: 1rem;
+      position: relative;
+    }
+    .dropdown-content a:nth-child(1) {
+      margin-top: 2rem;
+    }
+  
+    .dropdown-content a:hover {
+      color: #32cdb1;
+    }
+  
+    .dropdown:hover .dropdown-content {
+      max-height: 20rem;
+    }
+  
+    .dropdown:hover .drop-btn:after {
+      font-family: "Font Awesome 5 Free";
+      content: "\f077";
+    }
 }

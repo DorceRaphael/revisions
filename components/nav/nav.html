@@ -1,94 +1,109 @@
-<nav id="nav" class="nav" role="navigation">
-  <section class="nav-section">
-    <!-- ACTUAL NAVIGATION MENU -->
-    <ul
-      class="nav-menu"
-      id="menu"
-      tabindex="-1"
-      aria-label="main navigation"
-      hidden
-    >
-      <li class="nav-item"><a href="">ACCUEIL</a></li>
-      <li class="nav-item">
-        <a class="accordion nav-link">GENRES</a>
-        <ul class="panel">
-          <li><a href="">ALTERNATIVE</a></li>
-          <li><a href="">BLUES</a></li>
-          <li><a href="">HIP HOP</a></li>
-          <li><a href="">ROCK</a></li>
-          <li><a href="">INDIE</a></li>
-          <li><a href="">METAL</a></li>
-          <li><a href="">POP</a></li>
-        </ul>
-      </li>
-      <li class="nav-item"><a href="" class="nav-link">À PROPOS</a></li>
-      <li class="nav-item"><a href="" class="nav-link">CONNEXION</a></li>
-      <a href="">
-        <img
-          class="logo"
-          src="./assets/images/logo.svg"
-          alt="logo du site music data"
-        />
-      </a>
-    </ul>
-    <div class="navbar">
-      <a href="">
-        <img
-          class="logo"
-          src="./assets/images/logo.svg"
-          alt="logo du site music data"
-        />
-      </a>
-      <!-- MENU TOGGLE BUTTON -->
-      <a
-        href="#nav"
-        class="nav-toggle"
-        role="button"
-        aria-expanded="false"
-        aria-controls="menu"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="nav.css">
+  <script src="nav.js"></script>
+</head>
+<body>
+  <div class="nav-placeholder"></div>
+  <nav id="nav" class="nav" role="navigation">
+    <section class="nav-section">
+      <!-- ACTUAL NAVIGATION MENU -->
+      <ul
+        class="nav-menu"
+        id="menu"
+        tabindex="-1"
+        aria-label="main navigation"
+        hidden
       >
-        <svg
-          class="menu-icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="50"
-          viewBox="0 0 50 50"
-        >
-          <g>
-            <line class="menu-icon-bar" x1="13" y1="16.5" x2="37" y2="16.5" />
-            <line class="menu-icon-bar" x1="13" y1="24.5" x2="37" y2="24.5" />
-            <line class="menu-icon-bar" x1="13" y1="24.5" x2="37" y2="24.5" />
-            <line class="menu-icon-bar" x1="13" y1="32.5" x2="37" y2="32.5" />
-            <circle class="menu-icon-circle" r="23" cx="25" cy="25" />
-          </g>
-        </svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- NAV DESKTOP -->
-  <section class="nav-desktop-section">
-    <div class="navbar-desktop">
-      <a href="">
-        <img
-          class="logo"
-          src="./assets/images/logo.svg"
-          alt="logo du site music data"
-        />
-      </a>
-      <ul>
-        <li><a href="">ACCUEIL</a></li>
-        <li><a href="#">CONNEXION</a></li>
-        <li>
-          <a
-            class="social-icon"
-            href="https://github.com/DorceRaphael/projet_data"
-            target="_blank"
-          >
-            <i class="fab fa-github-square"></i>
-          </a>
+        <li class="nav-item"><a href="">ACCUEIL</a></li>
+        <li class="nav-item">
+          <a class="accordion nav-link">GENRES</a>
+          <ul class="panel">
+            <li><a href="">ALTERNATIVE</a></li>
+            <li><a href="">BLUES</a></li>
+            <li><a href="">HIP HOP</a></li>
+            <li><a href="">ROCK</a></li>
+            <li><a href="">INDIE</a></li>
+            <li><a href="">METAL</a></li>
+            <li><a href="">POP</a></li>
+          </ul>
         </li>
+        <li class="nav-item"><a href="" class="nav-link">À PROPOS</a></li>
+        <li class="nav-item"><a href="" class="nav-link">CONNEXION</a></li>
+        <a href="">
+          <img
+            class="logo"
+            src="./assets/images/logo.svg"
+            alt="logo du site music data"
+          />
+        </a>
       </ul>
-    </div>
-  </section>
-</nav>
+      <div class="navbar">
+        <a href="">
+          <img
+            class="logo"
+            src="./assets/images/logo.svg"
+            alt="logo du site music data"
+          />
+        </a>
+        <!-- MENU TOGGLE BUTTON -->
+        <a
+          href="#nav"
+          class="nav-toggle"
+          role="button"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <svg
+            class="menu-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+          >
+            <g>
+              <line class="menu-icon-bar" x1="13" y1="16.5" x2="37" y2="16.5" />
+              <line class="menu-icon-bar" x1="13" y1="24.5" x2="37" y2="24.5" />
+              <line class="menu-icon-bar" x1="13" y1="24.5" x2="37" y2="24.5" />
+              <line class="menu-icon-bar" x1="13" y1="32.5" x2="37" y2="32.5" />
+              <circle class="menu-icon-circle" r="23" cx="25" cy="25" />
+            </g>
+          </svg>
+        </a>
+      </div>
+    </section>
+  
+    <!-- NAV DESKTOP -->
+    <section class="nav-desktop-section">
+      <div class="navbar-desktop">
+        <a href="">
+          <img
+            class="logo"
+            src="./assets/images/logo.svg"
+            alt="logo du site music data"
+          />
+        </a>
+        <ul>
+          <li><a href="">ACCUEIL</a></li>
+          <li><a href="#">CONNEXION</a></li>
+          <li>
+            <a
+              class="social-icon"
+              href="https://github.com/DorceRaphael/projet_data"
+              target="_blank"
+            >
+              <i class="fab fa-github-square"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </nav>
+  <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo numquam repellendus deleniti sequi quod iusto saepe labore natus possimus voluptatem. Voluptatem numquam dicta fugiat placeat repellat, nam error dolores, at maxime ullam consequuntur quod ipsum. At quis ratione voluptatibus iste autem quasi illo, aliquid ullam eligendi earum harum hic, corporis minima deserunt facilis sed assumenda blanditiis eveniet omnis eius nam aut nulla vitae. Sequi placeat recusandae reiciendis saepe aut quasi harum blanditiis ut assumenda culpa qui laborum voluptatem excepturi voluptas libero doloremque impedit atque, optio ullam fugit. Dolores odio nam maxime. Culpa quos eligendi necessitatibus nostrum libero, dolore, optio dolorem sit eum reiciendis, perferendis distinctio molestiae perspiciatis voluptatibus. A consectetur ipsam at, eaque dolorum, amet quam maxime explicabo incidunt quaerat fugit ipsum iste sed! Nam rem ex quis delectus temporibus possimus eveniet nisi aliquam cumque, labore illum repudiandae cupiditate expedita, voluptas odit vel! Iusto, eligendi minus, ratione consequatur minima, ipsa molestiae omnis officia nemo distinctio molestias exercitationem. Iste quos sequi laborum magni totam rerum, sed, qui nisi veritatis explicabo aliquam eligendi molestiae quis! Laudantium eligendi distinctio nostrum soluta atque. Perferendis illo unde nobis! Accusamus deleniti corporis quo quasi facere odio exercitationem et dolores repudiandae dolor atque eum numquam sapiente, deserunt, pariatur tempore vel ullam eveniet architecto recusandae ab corrupti sunt necessitatibus hic! Earum ex possimus quaerat corporis consequatur sequi vel veniam, distinctio labore repellendus ea officiis error sunt minima? Cupiditate consequuntur molestias nulla repudiandae fugit magni ducimus quisquam tempora libero eius. Provident molestias sunt unde maxime, recusandae suscipit consequuntur nobis praesentium inventore dolores ducimus dolore iure facilis odio alias corrupti optio expedita? Repellat temporibus consectetur ad officia atque porro maxime illo dolorem nemo perspiciatis sequi, minus quam culpa reprehenderit fugit saepe excepturi pariatur! Sint laudantium omnis vel hic fuga, obcaecati unde accusamus nam dolorum culpa odio exercitationem commodi magnam fugiat numquam qui mollitia distinctio quidem excepturi consectetur ex cum amet. Repudiandae, beatae nemo provident sed, iure nesciunt repellat quam voluptatum fuga ipsam atque est reiciendis id tenetur dignissimos eveniet earum magnam debitis consequuntur esse optio aut quod. Explicabo aliquid id soluta cumque iusto quos odit laboriosam! Sunt vel deleniti omnis odio, eius nulla enim quae dolor, dignissimos inventore dolorum doloribus expedita ab, unde cumque minima quia repellat non architecto quidem dolorem sit! Velit recusandae quidem sed quis nam cupiditate atque error similique nisi officiis reiciendis beatae accusantium, maiores voluptatum, odio eveniet nostrum dolores voluptatibus necessitatibus accusamus omnis ex rerum. Magni delectus consequuntur eos quaerat officiis, eligendi sapiente vitae aut quia deserunt blanditiis unde aspernatur quod animi consectetur! Saepe nobis corporis facilis temporibus consequuntur nemo adipisci. Alias maxime soluta expedita dolore eaque quae veritatis, consequatur ex numquam saepe nulla officia corporis omnis fugiat aliquam consectetur, quo dolores sit eum error temporibus vero totam voluptas. Dolores facilis ipsum eos, reprehenderit numquam laudantium nisi iusto vero atque totam praesentium eaque soluta neque ipsam hic et rerum tenetur odit optio quo, explicabo enim itaque similique quia. Dolorum pariatur aut numquam qui. Ut blanditiis repudiandae voluptatum, animi provident iure in dolore! Nisi provident exercitationem facere.lor, dignissimos inventore dolorum doloribus expedita ab, unde cumque minima quia repellat non architecto quidem dolorem sit! Velit recusandae quidem sed quis nam cupiditate atque error similique nisi officiis reiciendis beatae accusantium, maiores voluptatum, odio eveniet nostrum dolores voluptatibus necessitatibus accusamus omnis ex rerum. Magni delectus consequuntur eos quaerat officiis, eligendi sapiente vitae aut quia deserunt blanditiis unde aspernatur quod animi consectetur! Saepe nobis corporis facilis temporibus consequuntur nemo adipisci. Alias maxime soluta expedita dolore eaque quae veritatis, consequatur ex numquam saepe nulla officia corporis omnis fugiat aliquam consectetur, quo dolores sit eum error temporibus vero totam voluptas. Dolores facilis ipsum eos, reprehenderit numquam laudantium nisi iusto vero atque totam praesentium eaque soluta neque ipsam hic et rerum tenetur odit optio quo, explicabo enim itaque similique quia. Dolorum pariatur aut numquam qui. Ut blanditiis repudiandae voluptatum, animi provident iure in dolore! Nisi provident exercitationem facere.lor, dignissimos inventore dolorum doloribus expedita ab, unde cumque minima quia repellat non architecto quidem dolorem sit! Velit recusandae quidem sed quis nam cupiditate atque error similique nisi officiis reiciendis beatae accusantium, maiores voluptatum, odio eveniet nostrum dolores voluptatibus necessitatibus accusamus omnis ex rerum. Magni delectus consequuntur eos quaerat officiis, eligendi sapiente vitae aut quia deserunt blanditiis unde aspernatur quod animi consectetur! Saepe nobis corporis facilis temporibus consequuntur nemo adipisci. Alias maxime soluta expedita dolore eaque quae veritatis, consequatur ex numquam saepe nulla officia corporis omnis fugiat aliquam consectetur, quo dolores sit eum error temporibus vero totam voluptas. Dolores facilis ipsum eos, reprehenderit numquam laudantium nisi iusto vero atque totam praesentium eaque soluta neque ipsam hic et rerum tenetur odit optio quo, explicabo enim itaque similique quia. Dolorum pariatur aut numquam qui. Ut blanditiis repudiandae voluptatum, animi provident iure in dolore! Nisi provident exercitationem facere.lor, dignissimos inventore dolorum doloribus expedita ab, unde cumque minima quia repellat non architecto quidem dolorem sit! Velit recusandae quidem sed quis nam cupiditate atque error similique nisi officiis reiciendis beatae accusantium, maiores voluptatum, odio eveniet nostrum dolores voluptatibus necessitatibus accusamus omnis ex rerum. Magni delectus consequuntur eos quaerat officiis, eligendi sapiente vitae aut quia deserunt blanditiis unde aspernatur quod animi consectetur! Saepe nobis corporis facilis temporibus consequuntur nemo adipisci. Alias maxime soluta expedita dolore eaque quae veritatis, consequatur ex numquam saepe nulla officia corporis omnis fugiat aliquam consectetur, quo dolores sit eum error temporibus vero totam voluptas. Dolores facilis ipsum eos, reprehenderit numquam laudantium nisi iusto vero atque totam praesentium eaque soluta neque ipsam hic et rerum tenetur odit optio quo, explicabo enim itaque similique quia. Dolorum pariatur aut numquam qui. Ut blanditiis repudiandae voluptatum, animi provident iure in dolore! Nisi provident exercitationem facere.lor, dignissimos inventore dolorum doloribus expedita ab, unde cumque minima quia repellat non architecto quidem dolorem sit! Velit recusandae quidem sed quis nam cupiditate atque error similique nisi officiis reiciendis beatae accusantium, maiores voluptatum, odio eveniet nostrum dolores voluptatibus necessitatibus accusamus omnis ex rerum. Magni delectus consequuntur eos quaerat officiis, eligendi sapiente vitae aut quia deserunt blanditiis unde aspernatur quod animi consectetur! Saepe nobis corporis facilis temporibus consequuntur nemo adipisci. Alias maxime soluta expedita dolore eaque quae veritatis, consequatur ex numquam saepe nulla officia corporis omnis fugiat aliquam consectetur, quo dolores sit eum error temporibus vero totam voluptas. Dolores facilis ipsum eos, reprehenderit numquam laudantium nisi iusto vero atque totam praesentium eaque soluta neque ipsam hic et rerum tenetur odit optio quo, explicabo enim itaque similique quia. Dolorum pariatur aut numquam qui. Ut blanditiis repudiandae voluptatum, animi provident iure in dolore! Nisi provident exercitationem facere.lor, dignissimos inventore dolorum doloribus expedita ab, unde cumque minima quia repellat non architecto quidem dolorem sit! Velit recusandae quidem sed quis nam cupiditate atque error similique nisi officiis reiciendis beatae accusantium, maiores voluptatum, odio eveniet nostrum dolores voluptatibus necessitatibus accusamus omnis ex rerum. Magni delectus consequuntur eos quaerat officiis, eligendi sapiente vitae aut quia deserunt blanditiis unde aspernatur quod animi consectetur! Saepe nobis corporis facilis temporibus consequuntur nemo adipisci. Alias maxime soluta expedita dolore eaque quae veritatis, consequatur ex numquam saepe nulla officia corporis omnis fugiat aliquam consectetur, quo dolores sit eum error temporibus vero totam voluptas. Dolores facilis ipsum eos, reprehenderit numquam laudantium nisi iusto vero atque totam praesentium eaque soluta neque ipsam hic et rerum tenetur odit optio quo, explicabo enim itaque similique quia. Dolorum pariatur aut numquam qui. Ut blanditiis repudiandae voluptatum, animi provident iure in dolore! Nisi provident exercitationem facere.</section>
+</body>
+</html>
